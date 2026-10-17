@@ -20,6 +20,8 @@ tinymist preview \
 
 ## Compiling
 
+To PDF:
+
 ```bash
 typst compile \
     --ignore-system-fonts \
@@ -31,7 +33,21 @@ typst compile \
     src/00_organization/main.typ
 ```
 
-With podman:
+To html:
+
+```bash
+typst compile \
+    --ignore-system-fonts \
+    --font-path src \
+    --features html \
+    --format html \
+    --root . \
+    --input GIT_HASH="$(git rev-parse --short HEAD)" \
+    --input GIT_TAG="$(git describe --tags --exact-match)" \
+    src/00_organization/main.typ
+```
+
+With podman (PDF):
 
 ```bash
 podman build -t thesis-notes .

@@ -6,6 +6,7 @@
     date: datetime.today(),
   )
   set page(
+    paper: "a4",
     header: {
       set text(black.lighten(25%))
       stack(dir: ltr, spacing: 1fr)[
@@ -33,7 +34,13 @@
   )
   show link: set text(blue.darken(30%))
   show: cheq.checklist
-  body
+
+  context if target() == "html" {
+    set block(width: 100em)
+    body
+  } else {
+    body
+  }
 }
 
 #let template_doc_part(body) = {

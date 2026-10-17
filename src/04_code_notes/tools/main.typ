@@ -82,3 +82,18 @@ mlagents-learn config.yaml --resume --inference
 
 - BC or keyboard input: `Agent.Heuristic()`
 - Regular Intervals: `DecisionRequester`
+
+= suesas/marble-maze
+
+== Sensing & Actuation
+
+- Sensing: Transform values added with `VectorSensor.AddObservation()`
+- Actuation: Rotation clamped and set
+  - Interpolation: ???
+
+== RL
+
+- `BoardAgent.cs`
+  - implements `OnEpisodeBegin`, `CollectObservations`, `OnActionReceived`, `Heuristic`
+
+== SVG Level Importer

@@ -62,8 +62,6 @@
     link("https://codeberg.org/CyberRunner/cr-3d-models")[cr-3d-models],
     [
       Servo-based hardware setup
-
-      TODO img
     ],
     [
       - [/] Reload mechanism
@@ -72,8 +70,6 @@
     link("https://codeberg.org/CyberRunner/cr-reload-mechanism")[cr-reload],
     [
       Light Sensor + Solenoid
-
-      TODO img
     ],
     [#sym.checkmark Done],
   )

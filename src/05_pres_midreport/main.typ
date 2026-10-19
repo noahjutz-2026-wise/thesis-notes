@@ -25,7 +25,9 @@
   badges: (
     sys.inputs.at("GIT_HASH", default: ""),
     sys.inputs.at("GIT_TAG", default: ""),
-  ).filter(it => it.trim().len() > 0),
+  )
+    .filter(it => it.trim().len() > 0)
+    .map(it => it.slice(0, calc.min(16, it.len()))),
   footer-left: [
     #{ context document.author.join() } #sym.dot #{ context document.date.display() }
   ],

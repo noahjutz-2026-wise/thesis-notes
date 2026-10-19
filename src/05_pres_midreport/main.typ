@@ -128,6 +128,16 @@
   )
 ]
 
+#gh.section-slide(number: "04", title: [Open Issues])
+
+#gh.content-slide(title: [Open Issues])[
+  - [ ] Measure physical parameters
+  - [ ] Unity or MuJoCo
+  - [ ] Staying on topic
+  - [ ] Scope too large, milestone estimates not conservative enough
+  - [ ] No plans to use new BRIO labyrinth
+]
+
 #gh.closing-slide(
   kicker: [],
   title: [Thank you],

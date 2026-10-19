@@ -97,3 +97,10 @@ mlagents-learn config.yaml --resume --inference
   - implements `OnEpisodeBegin`, `CollectObservations`, `OnActionReceived`, `Heuristic`
 
 == SVG Level Importer
+
+- Creates GameObjects
+
+== Physics
+
+- Gravity: 250 $m/s^2$
+- Ball diameter: 16m

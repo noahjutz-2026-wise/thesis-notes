@@ -127,11 +127,20 @@
     )
 
     // Non-overlapping orthogonal line: from dot -> down to label_y -> left to label
+    // Milestone is in section idx = first section whose end date is after it
+    let idx = sections.len() - 1
+    for j in range(sections.len()) {
+      if milestones.at(i).first() < sections.at(j).first() {
+        idx = j
+        break
+      }
+    }
     line(
       (ruler_x, mid_y),
       (ruler_x, label_y),
       (m_col_x, label_y),
-      stroke: 0.75pt + black.lighten(40%),
+      stroke: 2pt + p10.at(idx).darken(20%),
+      mark: (start: "straight"),
     )
   }
 
@@ -173,7 +182,8 @@
       (ruler_x, bar_y + bar_h),
       (ruler_x, label_y),
       (s_col_x, label_y),
-      stroke: 0.75pt + black.lighten(40%),
+      stroke: 2pt + p10.at(i).darken(20%),
+      mark: (start: "straight"),
     )
 
     cur_d = d

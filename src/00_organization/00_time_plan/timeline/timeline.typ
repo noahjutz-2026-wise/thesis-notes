@@ -10,7 +10,7 @@
 #cetz.canvas(length: 1cm, {
   import cetz.draw: *
 
-  let bar_w = 11.5cm
+  let bar_w = 15.5cm
   let bar_h = 22pt
   let bar_x = 4.0cm
   let bar_y = 0cm
@@ -21,7 +21,7 @@
 
   // Base bar background
   set-style(stroke: none)
-  rect((bar_x, bar_y), (bar_x + bar_w, bar_y + bar_h), fill: black.lighten(95%))
+  // rect((bar_x, bar_y), (bar_x + bar_w, bar_y + bar_h), fill: black.lighten(95%))
 
   // Sections
   let current_date = daterange.from

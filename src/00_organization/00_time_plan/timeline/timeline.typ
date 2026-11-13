@@ -135,7 +135,7 @@
       (ruler_x, label_y),
       anchor: "north-east",
       padding: pad,
-      text(size: 8pt)[#str(i + 1) #h(4pt) #d.display("[year]-[month]-[day]")],
+      text(size: 8pt)[#c],
       name: label_name,
     )
   }

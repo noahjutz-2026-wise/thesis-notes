@@ -112,8 +112,21 @@ Notizen
 
 = Studierendenmeeting (Ehrnsperger-2 2026-10-19)
 
-- [ ] Presentation
+- [x] Presentation
 
-= Hardware (Weiß-4 2026-10-\?\?)
+= Hardware (Weiß-4 2026-10-25)
 
-- [ ] Hardware Setup
+- [x] Hardware Setup
+
+= Ergebnisse (Weiß-5 2026-11-\?\?)
+
+- [ ] Blocker
+  - [ ] Sim training not converging -- can skip?
+  - [ ] Sysid not working -- can skip?
+- [ ] Scientific approach
+  - [ ] OFAT okay?
+  - [ ] Data answers RQ?
+  - [ ] No Comparability with CR & Baseline at 0% -- how to compare?
+- [ ] Progress update
+  - [ ] Rewrote CR
+  - [ ] Compared 150 different rew/obs methods

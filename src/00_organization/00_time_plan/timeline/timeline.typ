@@ -15,7 +15,7 @@
   let bar_x = 4.0cm
   let bar_y = 0cm
   let mid_y = bar_y + bar_h / 2
-  let pad = 6pt
+  let pad = (x: -2pt, y: 4pt)
 
   let total_days = (daterange.to - daterange.from).days()
 
@@ -96,7 +96,6 @@
 
   // --- Milestone dots and labels (BELOW the bar) ---
   let n_m = milestones.len()
-  let m_col_x = bar_x - 10pt
   let m_spacing = 15pt
 
   for i in range(n_m) {
@@ -117,16 +116,7 @@
       name: ruler_name,
     )
 
-    // Milestone label to the left, anchor east
-    content(
-      (m_col_x, label_y),
-      anchor: "east",
-      padding: pad,
-      text(size: 8pt)[#str(i + 1) #h(4pt) #d.display("[year]-[month]-[day]")],
-      name: label_name,
-    )
-
-    // Non-overlapping orthogonal line: from dot -> down to label_y -> left to label
+    // Vertical-only edge: from dot straight down to the label's anchor corner
     // Milestone is in section idx = first section whose end date is after it
     let idx = sections.len() - 1
     for j in range(sections.len()) {
@@ -138,15 +128,20 @@
     line(
       (ruler_x, mid_y),
       (ruler_x, label_y),
-      (m_col_x, label_y),
       stroke: 2pt + p10.at(idx).darken(20%),
       mark: (start: "straight"),
     )
+    content(
+      (ruler_x, label_y),
+      anchor: "north-east",
+      padding: pad,
+      text(size: 8pt)[#str(i + 1) #h(4pt) #d.display("[year]-[month]-[day]")],
+      name: label_name,
+    )
   }
 
-  // --- Section labels (ABOVE the bar) on the LEFT ---
+  // --- Section labels (ABOVE the bar) ---
   let n_s = sections.len()
-  let s_col_x = bar_x - 10pt
   let s_spacing = 15pt
   let s_base_y = bar_y + bar_h + 10pt
 
@@ -170,18 +165,17 @@
     let label_name = "sec-lbl-" + str(i)
 
     content(
-      (s_col_x, label_y),
-      anchor: "east",
+      (ruler_x, label_y),
+      anchor: "south-east",
       padding: pad,
       text(size: 7.5pt, c),
       name: label_name,
     )
 
-    // Non-overlapping orthogonal line: from top of bar at ruler_x -> up to label_y -> left to label
+    // Vertical-only edge: from top of bar straight up to the label's anchor corner
     line(
       (ruler_x, bar_y + bar_h),
       (ruler_x, label_y),
-      (s_col_x, label_y),
       stroke: 2pt + p10.at(i).darken(20%),
       mark: (start: "straight"),
     )

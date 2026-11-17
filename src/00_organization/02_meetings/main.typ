@@ -132,4 +132,10 @@ Notizen
   - [ ] No Comparability with CR & Baseline at 0% -- how to compare?
 - [ ] Progress update
   - [ ] Rewrote CR
-  - [ ] Compared 150 different rew/obs methods
+  - [ ] Compared different rew/obs methods
+  - [ ] MJLab GPU Training
+- [ ] Priorities
+  - [ ] Unity evaluation
+  - [ ] MuJoCo Convergence
+  - [ ] Real backend CV Pipeline
+  - [ ] System Identification

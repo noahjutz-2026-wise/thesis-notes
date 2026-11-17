@@ -120,12 +120,15 @@ Notizen
 
 = Ergebnisse (Weiß-5 2026-11-\?\?)
 
+- [ ] No Results
+  - Sim: 0% accuracy
+  - Real: Backend incomplete
+  - Sysid: Dont know anything
 - [ ] Blocker
   - [ ] Sim training not converging -- can skip?
   - [ ] Sysid not working -- can skip?
 - [ ] Scientific approach
   - [ ] OFAT okay?
-  - [ ] Data answers RQ?
   - [ ] No Comparability with CR & Baseline at 0% -- how to compare?
 - [ ] Progress update
   - [ ] Rewrote CR

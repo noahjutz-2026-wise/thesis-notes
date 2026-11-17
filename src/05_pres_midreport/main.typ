@@ -117,7 +117,7 @@
     columns: 3,
     table.header([*\#*], [*Date*], [*Goal*]),
     table.hline(),
-    ..milestones_tbl.slice(0, 3 * 8),
+    ..milestones_tbl.slice(0, calc.min(3 * 8, milestones_tbl.len())),
   )
 ]
 
@@ -126,7 +126,7 @@
     columns: 3,
     table.header([*\#*], [*Date*], [*Goal*]),
     table.hline(),
-    ..milestones_tbl.slice(3 * 8),
+    ..milestones_tbl.slice(calc.min(3 * 8, milestones_tbl.len())),
   )
 ]
 

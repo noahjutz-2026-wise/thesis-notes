@@ -118,7 +118,7 @@ Notizen
 
 - [x] Hardware Setup
 
-= Ergebnisse (Weiß-5 2026-11-\?\?)
+= Ergebnisse (Weiß-5 2026-11-25)
 
 - [ ] No Results
   - Sim: 0% accuracy
@@ -139,3 +139,15 @@ Notizen
   - [ ] MuJoCo Convergence
   - [ ] Real backend CV Pipeline
   - [ ] System Identification
+  - [ ] Compared 150 different rew/obs methods
+- [ ] Thesis Annotations
+  - [ ] #rect(width: 100%)[
+      Mine:
+      $ p(tau) = p(s_0) product_(t=0)^oo pi(a_t|s_t) p(s_(t+1), r_(t+1) | s_t, a_t) $
+
+      B.S. (5.3):
+
+      $ & Pr(A_t, S_(t+1), A_(t+1), ..., S_T | S_t, A_(t:T-1) ~ pi) \
+      & = pi(A_t | S_t) p(S_(t+1) | S_t, A_t) pi(A_(t+1)|S_(t+1)) ... p(S_T|S_(T-1), A_(T-1) \
+      & = product_(k=t)^(T-1) pi(A_k | S_k) p(S_(k+1) | S_k, A_k) $
+    ]

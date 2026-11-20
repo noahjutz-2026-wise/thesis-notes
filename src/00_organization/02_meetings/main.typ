@@ -151,3 +151,5 @@ Notizen
       & = pi(A_t | S_t) p(S_(t+1) | S_t, A_t) pi(A_(t+1)|S_(t+1)) ... p(S_T|S_(T-1), A_(T-1) \
       & = product_(k=t)^(T-1) pi(A_k | S_k) p(S_(k+1) | S_k, A_k) $
     ]
+- [ ] submission
+  - [ ] sufficient to print at oth?
